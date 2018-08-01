@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const eventSubController = require('../controllers/eventSub')
+
+//////////////////////////////////////////////////////////////////////////////
+// Basic CRUD Methods
+//////////////////////////////////////////////////////////////////////////////
+
+router.get('/', eventSubController.getAll)
+
+module.exports = router

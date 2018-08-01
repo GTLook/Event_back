@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const evetMainController = require('../controllers/eventMain')
+
+//////////////////////////////////////////////////////////////////////////////
+// Basic CRUD Methods
+//////////////////////////////////////////////////////////////////////////////
+
+router.get('/', evetMainController.getAll)
+
+module.exports = router
