@@ -1,10 +1,10 @@
-const TABLE_NAME = 'event_sub'
+//table should contain a list of main event drop downs
+const TABLE_NAME = 'main_event'
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable(TABLE_NAME, (table) => {
     table.increments()  // id serial primary key
-    table.string('event_name')
-    table.integer('event_main_id').notNullable().references('event_main.id')
+    table.string('main_event_name')
   })
 };
 
